@@ -90,6 +90,8 @@ defmodule SaberWeb do
       # Core UI components
       import SaberWeb.CoreComponents
 
+      import LiveReact
+
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
 

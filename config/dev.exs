@@ -62,6 +62,11 @@ config :saber, SaberWeb.Endpoint,
     ]
   ]
 
+config :live_react,
+  vite_host: "http://localhost:5173",
+  ssr_module: LiveReact.SSR.ViteJS,
+  ssr: true
+
 # Enable dev routes for dashboard and mailbox
 config :saber, dev_routes: true
 
