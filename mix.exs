@@ -84,6 +84,7 @@ defmodule Saber.MixProject do
       # ]
       "assets.setup": ["cmd --cd assets npm install"],
       "assets.build": [
+        "cmd --cd assets npm install",
         "cmd --cd assets npm run build",
         "cmd --cd assets npm run build-server"
       ],
