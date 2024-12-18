@@ -9,7 +9,9 @@ module.exports = {
   content: [
     "./js/**/*.js",
     "../lib/saber_web.ex",
-    "../lib/saber_web/**/*.*ex"
+    "../lib/saber_web/**/*.*ex",
+    "./react-components/**/*.jsx", // <- if you are using jsx
+    "./react-components/**/*.tsx" // <- if you are using tsx
   ],
   theme: {
     extend: {

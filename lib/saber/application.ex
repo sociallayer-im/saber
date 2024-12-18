@@ -17,7 +17,8 @@ defmodule Saber.Application do
       # Start a worker by calling: Saber.Worker.start_link(arg)
       # {Saber.Worker, arg},
       # Start to serve requests, typically the last entry
-      SaberWeb.Endpoint
+      SaberWeb.Endpoint,
+      {NodeJS.Supervisor, [path: LiveReact.SSR.NodeJS.server_path(), pool_size: 4]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

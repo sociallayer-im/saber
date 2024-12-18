@@ -25,8 +25,9 @@ config :saber, SaberWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "MKqq5u4dm3ZXQMUrSfAjn0aKcBYRXdwifin5OUSd92PDAQ22TBGgHET9FfoKA2YO",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:saber, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:saber, ~w(--watch)]}
+    # esbuild: {Esbuild, :install_and_run, [:saber, ~w(--sourcemap=inline --watch)]},
+    # tailwind: {Tailwind, :install_and_run, [:saber, ~w(--watch)]}
+    npm: ["run", "dev", cd: Path.expand("../assets", __DIR__)]
   ]
 
 # ## SSL Support
